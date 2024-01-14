@@ -1,10 +1,10 @@
 
 package com.directmedia.onlinestore.firstapp.controller;
 
-//import dto.Personne;
+
+import dto.Personne;
 
 import java.io.*;
-import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
@@ -13,10 +13,9 @@ public class HelloServlet extends HttpServlet {
 
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse response) throws IOException {
         PrintWriter out = response.getWriter();
-        //Personne michaelSchumacher = new Personne("Michael","Schumacher");
-        out.print("<HTML><BODY>Bonjour 321 </BODY></HTML>");
+        Personne michaelSchumacher = new Personne("Michael","Schumacher");
+        out.print("<HTML><BODY>Bonjour "+michaelSchumacher.getFullName()+" </BODY></HTML>");
     }
-//"+michaelSchumacher.getFullName()+"
 }
