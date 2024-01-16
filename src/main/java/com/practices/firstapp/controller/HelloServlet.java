@@ -1,5 +1,5 @@
 
-package com.directmedia.onlinestore.firstapp.controller;
+package com.practices.firstapp.controller;
 
 
 import dto.Personne;
