@@ -1,8 +1,6 @@
 
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
-
-Osrc/main/java/com/directmedia/onlinestore/firstapp/controller/HelloServlet.java,c/e/ce46251aaa6498fb482813e487c5629d39ea8229
 J
 src/main/webapp/index.html,1/3/1337d72a3b1928dba82aa5210f5cdc0e88ce895b
 Å
@@ -138,8 +136,6 @@ Q.idea/sonarlint/securityhotspotstore/1/d/1d9757fbf344cc6f2da0b7e38d61d12339c957
 Q.idea/sonarlint/securityhotspotstore/1/0/10f2119b18de4c2d93011c2acd27301df22c2983,1/8/181a24cd338adcdf010bd6ca3ad609e05d52c0c5
 Å
 Q.idea/sonarlint/securityhotspotstore/1/8/188792529ee886cbdc6616248007f7a96c73e03d,2/f/2f46da370e70a7845ee0efd64270ccf14d2cb931
-Å
-Q.idea/sonarlint/securityhotspotstore/7/1/711df617e948831f559409024d8b860d220cebd1,3/7/372fad061c932ed1390411d61386652614db52f2
 w
 G.idea/sonarlint/issuestore/d/c/dc442a0762a1cc0d80c09dd6fc5dedebafaf66a1,4/f/4f64728b876c88376151e44aed2c30387a71e7ed
 w
@@ -154,3 +150,5 @@ w
 G.idea/sonarlint/issuestore/0/c/0c4799549ebca80c86406fd218445fef27b61acc,9/3/93f8de54e7d0fbcd1bc646516a4131f497b38a3f
 w
 G.idea/sonarlint/issuestore/6/c/6c12c046619028da98e2502918e6e119bd2491c2,0/f/0f9f24b7bfd1b22f013d4bb872dea80ac9f5c879
+q
+Asrc/main/java/com/practices/firstapp/controller/HelloServlet.java,4/4/4400897823077bf166801284cac8f49115d264b3
