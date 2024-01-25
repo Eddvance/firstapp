@@ -66,7 +66,7 @@ public class LoginServlet extends HttpServlet {
      * @see ServletResponse#setContentType
      */
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
         String login=req.getParameter("login");
         String password=req.getParameter("password");
