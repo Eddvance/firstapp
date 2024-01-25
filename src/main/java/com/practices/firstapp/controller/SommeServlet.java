@@ -30,16 +30,15 @@ public class SommeServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
-            response.setContentType("text/html");
-            PrintWriter out = response.getWriter();
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        try {
             String nombre1 = request.getParameter("nombre1");
             String nombre2 = request.getParameter("nombre2");
             int total = Integer.parseInt(nombre1) + Integer.parseInt(nombre2);
             out.print("<HTML><BODY>La somme des 2 nombres fournis est : " + total + "</BODY></HTML>");
-
-
-
-
-
+        }
+       catch (NumberFormatException nb){
+       }
     }
 }

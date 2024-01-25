@@ -5,23 +5,35 @@ package com.practices.firstapp.controller;
 import dto.Personne;
 
 import java.io.*;
+import java.util.Date;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-@WebServlet(name = "helloServlet", value = "/hello")
+@WebServlet(name = "helloServlet", value = "/hello", loadOnStartup = 1)
 public class HelloServlet extends HttpServlet {
+
+Date dateInitialisation;
+
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+        super.init(config);
+        dateInitialisation=new Date();
+    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse response) throws IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         Personne michaelSchumacher = new Personne("Michael","Schumacher");
-        out.print("<HTML><BODY>مرحبا  "+michaelSchumacher.getFullName());
-        out.println("<a href=\"somme\">   - Accès au test somme</a>");
-        out.println("<a href=\"login\">  -  Accès identification</a>");
+        out.print("<HTML><BODY>مرحبا " +michaelSchumacher.getFullName());
+        out.println("<a href=\"loginFirstApp\">-Identifiez-vous-</a><br/><br/>");
+        out.println("<a href=\"somme\">-Test calcul somme-</a><br/><br/>");
+        out.println("<a href=\"testThread\">-Retrait Especes-</a><br/><br/>");
+        out.println("Ce resultat vous est servi par une servlet instanciee le "+dateInitialisation);
         out.println("</BODY></HTML>");
     }
 }
