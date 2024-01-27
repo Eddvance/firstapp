@@ -13,7 +13,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-@WebServlet(name = "helloServlet", value = "/hello", loadOnStartup = 1)
+@WebServlet(name = "HelloServlet", value = "/hello", loadOnStartup = 1)
 public class HelloServlet extends HttpServlet {
 
 Date dateInitialisation;
@@ -29,10 +29,11 @@ Date dateInitialisation;
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         Personne michaelSchumacher = new Personne("Michael","Schumacher");
-        out.print("<HTML><BODY>مرحبا " +michaelSchumacher.getFullName());
-        out.println("<a href=\"loginFirstApp\">-Identifiez-vous-</a><br/><br/>");
-        out.println("<a href=\"somme\">-Test calcul somme-</a><br/><br/>");
-        out.println("<a href=\"testThread\">-Retrait Especes-</a><br/><br/>");
+        out.print("<HTML><BODY>مرحبا " +michaelSchumacher.getFullName()+"<br/><br/>");
+        out.println("<a href=\"loginFirstApp\">--Identifiez-vous--</a><br/><br/>");
+        out.println("<a href=\"somme\">--Test calcul--</a><br/><br/>");
+        out.println("<a href=\"testThread\">--Retrait Especes--</a><br/><br/>");
+        out.println("<a href=\"selectionLivre\">--Achat de livre--</a><br/><br/>");
         out.println("Ce resultat vous est servi par une servlet instanciee le "+dateInitialisation);
         out.println("</BODY></HTML>");
     }

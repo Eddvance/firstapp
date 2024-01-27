@@ -24,11 +24,16 @@ public class TestThreadServlet extends HttpServlet {
        String montant= req.getParameter("montant");
 
        try {
-           Thread.sleep(10000);
+           Thread.sleep(100);
        } catch (InterruptedException ex) {
            Logger.getLogger(TestThreadServlet.class.getName()).log(Level.SEVERE, null, ex);
        }
         PrintWriter out =resp.getWriter();
-       out.println("<html><body>Vous avez retire "+montant+" euros</body></html>");
+        out.println("<html><body><a href=\"saisie-montant.html\">Retirer</a><br/>");
+        if (montant != null) {
+            out.println("<html><boby>Montant retire : "+montant+"</body></html>");
+        }
+
     }
+
 }

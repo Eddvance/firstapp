@@ -1,7 +1,8 @@
 package com.practices.firstapp.controller;
 
+import com.itextpdf.text.pdf.PdfWriter;
+
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,19 +11,15 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "LoginFirstAppServlet", value = "/loginFirstApp")
-public class LoginServlet extends HttpServlet {
-
+@WebServlet(name = "SelectionLivreServlet", value = "/selectionLivre")
+public class SelectionLivreServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        resp.setContentType("text/html;charset=UTF-8");
+        String identifiantlivre=req.getParameter("id");
         PrintWriter out=resp.getWriter();
-        String login=req.getParameter("login");
-        String password=req.getParameter("password");
-
-        out.println("<html><body><a href=\"loginFirstApp.html\">Authentifiez vous</a><br/>");
-        out.println("<a href=\"hello\"> Bienvenue</a></body></html>");
+        out.println("<html><body><a href=\"choix-du-livre.html\">Cliquez ici pour choisir votre livre</a><br/>");
+        //out.println("Merci d'avoir choisi le livre "+identifiantlivre+"<br/>");
+        out.println("<a href=\"payer-livre.html\">Cliquez ici pour regler</a></body></html><br/>");
     }
 }
