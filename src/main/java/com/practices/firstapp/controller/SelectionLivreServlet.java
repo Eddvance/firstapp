@@ -11,15 +11,19 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "SelectionLivreServlet", value = "/selectionLivre")
+@WebServlet(name = "SelectionLivreServlet", value = "/selection-livre")
 public class SelectionLivreServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String identifiantlivre=req.getParameter("id");
         PrintWriter out=resp.getWriter();
-        out.println("<html><body><a href=\"choix-du-livre.html\">Cliquez ici pour choisir votre livre</a><br/>");
-        //out.println("Merci d'avoir choisi le livre "+identifiantlivre+"<br/>");
+        out.println("<html><body>Merci d'avoir choisi le livre "+identifiantlivre+"<br/>");
         out.println("<a href=\"payer-livre.html\">Cliquez ici pour regler</a></body></html><br/>");
+
+
+        //out.println("<html><body><a href=\"choix-du-livre.html\">Cliquez ici pour choisir votre livre</a><br/>");
+        //out.println("Merci d'avoir choisi le livre "+identifiantlivre+"<br/>");
+
     }
 }

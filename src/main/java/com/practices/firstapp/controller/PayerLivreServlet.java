@@ -21,7 +21,7 @@ public class PayerLivreServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String numeroCarte=req.getParameter("numeroCarte");
         PrintWriter out=resp.getWriter();
-
         out.println("<html><body>Paiement effectue avec le numero de carte suivant : "+numeroCarte+"</body></html><br/>");
+
     }
 }
