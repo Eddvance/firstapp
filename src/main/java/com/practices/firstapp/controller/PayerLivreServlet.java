@@ -27,7 +27,7 @@ public class PayerLivreServlet extends HttpServlet {
         String identifiantlivre=(String) session.getAttribute("identifiantLivre");
         //session.setAttribute("identifiantLivre", null);
         //ou bien : session.removeAttribute("identifiantLivre");
-        //encore : sessiomn.invalidate(); lors d'une deconnexion (logOut)
+        //encore : session.invalidate(); lors d'une deconnexion (logOut)
         PrintWriter out=resp.getWriter();
         out.println("<html><body>Paiement effectue avec le numero de carte suivant : "+numeroCarte+"<br/>");
         out.println("Le livre paye est le livre numero : "+identifiantlivre+".<br/>");
