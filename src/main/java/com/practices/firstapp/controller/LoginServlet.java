@@ -21,8 +21,8 @@ public class LoginServlet extends HttpServlet {
         PrintWriter out=resp.getWriter();
         String login=req.getParameter("login");
         String password=req.getParameter("password");
-
         out.println("<html><body><a href=\"loginFirstApp.html\">Authentifiez vous</a><br/>");
-        out.println("<a href=\"hello\"> Bienvenue</a></body></html>");
+        //
+        // out.println("<a href=\"hello\"> Bienvenue</a></body></html>");
     }
 }
