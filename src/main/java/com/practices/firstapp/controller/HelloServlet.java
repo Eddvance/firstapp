@@ -31,7 +31,7 @@ Date dateInitialisation;
         Personne michaelSchumacher = new Personne("Michael","Schumacher");
         out.print("<HTML><BODY>مرحبا " +michaelSchumacher.getFullName()+"<br/><br/>");
         out.println("<a href=\"loginFirstApp\">--Identifiez-vous--</a><br/><br/>");
-        out.println("<a href=\"somme\">--Test calcul--</a><br/><br/>");
+        out.println("<a href=\"saisie-nombre.html\">--Test calcul--</a><br/><br/>");
         out.println("<a href=\"testThread\">--Retrait Especes--</a><br/><br/>");
         out.println("<a href=\"choix-du-livre.html\">--Achat de livre--</a><br/><br/>");
         out.println("Ce resultat vous est servi par une servlet instanciee le "+dateInitialisation);
