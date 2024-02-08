@@ -26,7 +26,6 @@ public class UnexpectedErrorServlet extends HttpServlet {
             out.println("<h1>Unexpected Error - Operation Cancelled(from Servlet)</h1>");
             out.println("</body>");
             out.println("</html>");
-
         }
     }
 
