@@ -41,7 +41,6 @@ public class SommeServlet extends HttpServlet {
             catch (NumberFormatException nfe) {
                 RequestDispatcher disp = req.getRequestDispatcher("/unexpected-error.html");
             }
-
     }
 }
 
