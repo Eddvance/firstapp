@@ -39,8 +39,3 @@ public class SommeServlet extends HttpServlet {
         }
     }
 }
-
-                    RequestDispatcher disp = req.getRequestDispatcher("/work-added-success");
-                    disp.forward(req, resp);
-                    Catalogue.listOfWorks.add(newWork);
-                    out.println("<html><body>Le film a ete ajoute -<a href=\"home\"> Retourner a la page d'accueil</a></body></html>");
