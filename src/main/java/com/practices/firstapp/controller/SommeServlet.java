@@ -19,23 +19,34 @@ public class SommeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        resp.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = resp.getWriter();
+
         String nombre1 = req.getParameter("nombre1");
         String nombre2 = req.getParameter("nombre2");
 
         try {
-            int total = Integer.parseInt(nombre1) + Integer.parseInt(nombre2);
-            out.println("<html><body><a href=\"saisie-nombre.html\">Cliquez ici pour effectuer un nouveau calcul</a><br/>");
-            out.print("La somme des 2 nombres fournis est : " + total + "</body></html>");
+            int somme = Integer.parseInt(nombre1) + Integer.parseInt(nombre2);
 
-
-        } catch (NumberFormatException n) {
-            //n.printStackTrace();
-            //RequestDispatcher disp=req.getRequestDispatcher("/unexpected-error.html");
-            RequestDispatcher disp=req.getRequestDispatcher("/unexpected-error");
-            disp.forward(req,resp);
-
+            String format = req.getParameter("format");
+            if (format != null && format.equals("pdf")) {
+                req.setAttribute("somme", somme);
+                RequestDispatcher disp = req.getRequestDispatcher("/pdf");
+                disp.forward(req, resp);
+            } else {
+                resp.setContentType("text/html;charset=UTF-8");
+                PrintWriter out = resp.getWriter();
+                out.println("<html><body><a href=\"saisie-nombre.html\">Cliquez ici pour effectuer un nouveau calcul</a><br/>");
+                out.print("La somme des 2 nombres fournis est : " + somme + "</body></html>");
+            }
         }
+            catch (NumberFormatException nfe) {
+                RequestDispatcher disp = req.getRequestDispatcher("/unexpected-error.html");
+            }
+
     }
 }
+
+
+
+
+
+

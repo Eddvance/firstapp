@@ -20,11 +20,20 @@ public class PdfServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("application/pdf");
 
-        try{
+        try {
             Document document = new Document();
             PdfWriter.getInstance(document, response.getOutputStream());
             document.open();
-            document.add(new Paragraph("Hello world en pdf"));
+            Integer somme=(Integer)req.getAttribute("somme");
+            String message=null;
+
+            if(somme!=null){
+                message="La somme des nombres est "+somme;
+            }
+            else {
+                message="Hello World en pdf";
+            }
+            document.add(new Paragraph(message));
             document.close();
         }
         catch (Exception e){
