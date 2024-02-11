@@ -12,16 +12,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-
-
 @WebServlet(name = "TestThreadServlet", value = "/testThread")
 public class TestThreadServlet extends HttpServlet {
 
-
-
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-       String montant= req.getParameter("montant");
+    protected void doGet(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
+       String montant= request.getParameter("montant");
 
        try {
            Thread.sleep(100);
@@ -33,7 +29,5 @@ public class TestThreadServlet extends HttpServlet {
         if (montant != null) {
             out.println("<html><boby>Montant retire : "+montant+"</body></html>");
         }
-
     }
-
 }

@@ -17,14 +17,14 @@ import java.io.IOException;
 public class PdfServlet extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("application/pdf");
 
         try {
             Document document = new Document();
             PdfWriter.getInstance(document, response.getOutputStream());
             document.open();
-            Integer somme=(Integer)req.getAttribute("somme");
+            Integer somme=(Integer)request.getAttribute("somme");
             String message=null;
 
             if(somme!=null){

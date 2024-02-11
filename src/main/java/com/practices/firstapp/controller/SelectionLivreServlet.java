@@ -17,10 +17,10 @@ import java.io.PrintWriter;
 public class SelectionLivreServlet extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        HttpSession session=req.getSession();
+    protected void doGet(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
+        HttpSession session=request.getSession();
         String numeroSession=session.getId();
-        String identifiantLivre=req.getParameter("id");
+        String identifiantLivre=request.getParameter("id");
         Livre livre=new Livre();
         livre.setNumeroLivre(Integer.parseInt(identifiantLivre));
         session.setAttribute("livre", livre);

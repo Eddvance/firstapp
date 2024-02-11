@@ -19,11 +19,11 @@ public class PayerLivreServlet extends HttpServlet {
 
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
 
-        HttpSession session=req.getSession();
+        HttpSession session=request.getSession();
         String numeroSession=session.getId();
-        String numeroCarte=req.getParameter("numeroCarte");
+        String numeroCarte=request.getParameter("numeroCarte");
         String identifiantlivre=(String) session.getAttribute("identifiantLivre");
         //session.setAttribute("identifiantLivre", null);
         //ou bien : session.removeAttribute("identifiantLivre");

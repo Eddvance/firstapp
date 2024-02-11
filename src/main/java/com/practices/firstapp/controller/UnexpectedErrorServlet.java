@@ -14,7 +14,7 @@ import java.io.PrintWriter;
 public class UnexpectedErrorServlet extends HttpServlet {
 
 
-    protected void processRequest(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void processRequest(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
         try  (PrintWriter out=resp.getWriter()) {
             out.println("<!DOCTYPE html>");

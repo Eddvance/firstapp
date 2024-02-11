@@ -15,12 +15,12 @@ public class LoginServlet extends HttpServlet {
 
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
 
         resp.setContentType("text/html;charset=UTF-8");
         PrintWriter out=resp.getWriter();
-        String login=req.getParameter("login");
-        String password=req.getParameter("password");
+        String login=request.getParameter("login");
+        String password=request.getParameter("password");
         out.println("<html><body><a href=\"loginFirstApp.html\">Authentifiez vous</a><br/>");
         //
         // out.println("<a href=\"hello\"> Bienvenue</a></body></html>");

@@ -15,17 +15,14 @@ import java.io.PrintWriter;
 public class SommeServlet extends HttpServlet {
 
 
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
-
 
         String nombre1 = request.getParameter("nombre1");
         String nombre2 = request.getParameter("nombre2");
 
         try {
             int somme = Integer.parseInt(nombre1) + Integer.parseInt(nombre2);
-
             String format = request.getParameter("format");
             request.setAttribute("somme", somme);
             if (format != null && format.equals("pdf")) {
@@ -34,18 +31,9 @@ public class SommeServlet extends HttpServlet {
             } else {
                 RequestDispatcher disp = request.getRequestDispatcher("/affichage-somme.jsp");
                 disp.forward(request, resp);
-               //("<html><body><a href=\"saisie-nombre.html\">Cliquez ici pour effectuer un nouveau calcul</a><br/>");
-               //("La somme des 2 nombres fournis est : " + somme + "</body></html>");
             }
+        } catch (NumberFormatException nfe) {
+            RequestDispatcher disp = request.getRequestDispatcher("/unexpected-error.html");
         }
-            catch (NumberFormatException nfe) {
-                RequestDispatcher disp = request.getRequestDispatcher("/unexpected-error.html");
-            }
     }
 }
-
-
-
-
-
-

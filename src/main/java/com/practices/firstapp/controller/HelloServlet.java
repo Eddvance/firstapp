@@ -25,7 +25,7 @@ Date dateInitialisation;
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse response) throws IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         Personne michaelSchumacher = new Personne("Michael","Schumacher");
