@@ -1,6 +1,7 @@
 package com.practices.firstapp.controller;
 
 import com.itextpdf.text.pdf.PdfWriter;
+import dto.Livre;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletResponse;
@@ -19,10 +20,13 @@ public class SelectionLivreServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session=req.getSession();
         String numeroSession=session.getId();
-        String identifiantlivre=req.getParameter("id");
-        session.setAttribute("identifiantLivre", identifiantlivre);
+        String identifiantLivre=req.getParameter("id");
+        Livre livre=new Livre();
+        livre.setNumeroLivre(Integer.parseInt(identifiantLivre));
+        session.setAttribute("livre", livre);
+
         PrintWriter out=resp.getWriter();
-        out.println("<html><body>Merci d'avoir choisi le livre "+identifiantlivre+"<br/>");
+        out.println("<html><body>Merci d'avoir choisi le livre "+identifiantLivre+"<br/>");
         out.println("Votre numero de session est : "+numeroSession+".<br/>");
         out.println("<a href=\"payer-livre.html\">Cliquez ici pour regler</a></body></html><br/>");
 
