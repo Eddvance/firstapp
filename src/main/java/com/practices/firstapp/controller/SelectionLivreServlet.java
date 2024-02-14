@@ -30,9 +30,5 @@ public class SelectionLivreServlet extends HttpServlet {
         out.println("Votre numero de session est : "+numeroSession+".<br/>");
         out.println("<a href=\"payer-livre.html\">Cliquez ici pour regler</a></body></html><br/>");
 
-
-        //out.println("<html><body><a href=\"choix-du-livre.html\">Cliquez ici pour choisir votre livre</a><br/>");
-        //out.println("Merci d'avoir choisi le livre "+identifiantlivre+"<br/>");
-
     }
 }
