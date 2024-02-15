@@ -29,7 +29,7 @@ public class SommeServlet extends HttpServlet {
                 RequestDispatcher disp = request.getRequestDispatcher("/pdf");
                 disp.forward(request, resp);
             } else {
-                RequestDispatcher disp = request.getRequestDispatcher("/affichage-somme.jsp");
+                RequestDispatcher disp = request.getRequestDispatcher("/WEB-INF/affichage-somme.jsp");
                 disp.forward(request, resp);
             }
         } catch (NumberFormatException nfe) {

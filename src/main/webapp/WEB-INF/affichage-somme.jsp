@@ -12,6 +12,6 @@
 </head>
 <body>
 La somme des 2 nombres fournis est : ${somme}<br>
-Cliquez <a href="saisie-nombre.html">ici</a> pour effectuer un nouveau calcul
+Cliquez <a href="../saisie-nombre.html">ici</a> pour effectuer un nouveau calcul
 </body>
 </html>
