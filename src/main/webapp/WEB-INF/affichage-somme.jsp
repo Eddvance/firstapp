@@ -7,7 +7,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
 
+<p>La somme des 2 nombres fournis est ${somme}</p>
 
-<p>La somme des 2 nombres fournis est : ${somme}</p>
+
 
 <%--Cliquez <a href="saisie-nombre.html">ici</a> pour effectuer un nouveau calcul--%>
