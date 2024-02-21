@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 
 @WebServlet(name = "SommeServlet", value = "/somme")
@@ -22,14 +23,17 @@ public class SommeServlet extends HttpServlet {
 
 
             int somme = Integer.parseInt(nombre1) + Integer.parseInt(nombre2);
+            int produit=Integer.parseInt(nombre1)*Integer.parseInt(nombre2);
             String format = request.getParameter("format");
-            request.setAttribute("somme", somme);
+
             if (format != null && format.equals("pdf")) {
-                RequestDispatcher disp = request.getRequestDispatcher("/pdf");
+                request.setAttribute("somme", somme); RequestDispatcher disp = request.getRequestDispatcher("/pdf");
                 disp.forward(request, response);
             } else {
-                RequestDispatcher disp = request.getRequestDispatcher("/WEB-INF/affichage-somme.jsp");
-                disp.forward(request, response);
+                response.setContentType("application/json");
+                PrintWriter out=response.getWriter();
+                String messageJSON="{\"somme\" : { \"numerique\":"+somme+", \"texte\": \"douze\"},"+"\"produit\" : { \"numerique\":"+produit+",\"texte\":\"trente-six\"}}";
+                out.println(messageJSON);
             }
 
             RequestDispatcher disp = request.getRequestDispatcher("/unexpected-error.html");
