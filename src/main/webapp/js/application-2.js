@@ -9,7 +9,7 @@ $(document).ready(function(){
               data: $("form").serialize(),
               success: function(result) {
                   $("p").remove();
-                  $("form").after(result);
+                  $("form").after("<p>La somme des 2 nombres fournis est "+result+"</p>");
               }
             });
         }

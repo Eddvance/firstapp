@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
 
-<p>La somme des 2 nombres fournis est ${somme}</p>
+${somme}
 
 
 
