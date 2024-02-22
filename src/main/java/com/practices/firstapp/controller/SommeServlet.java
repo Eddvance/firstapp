@@ -64,9 +64,9 @@ public class SommeServlet extends HttpServlet {
                 produit2.setTexte("rien d'autre");
                 list.add(produit2);*/
 
-                objectMapper.writeValue(out,sommeEtProduit);
 
-                //objectMapper.writeValue(out,list);
+
+                objectMapper.writeValue(out,sommeEtProduit);
                 //String messageJSON="{\"somme\" : { \"numerique\":"+somme+", \"texte\": \"douze\"},"+"\"produit\" : { \"numerique\":"+produit+",\"texte\":\"trente-six\"}}";
                 //out.println(messageJSON);
             }

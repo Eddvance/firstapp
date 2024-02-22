@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('input').last().on('click',function(){
         $.ajax({
-          url: "somme",
+          url: "rest/calculation/somme-et-produit",
           data: $("form").serialize(),
 
 

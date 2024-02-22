@@ -11,6 +11,13 @@
         <servlet-name>HelloServletwebxml</servlet-name>
         <url-pattern>/xml</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>javax.ws.rs.core.Application</servlet-name>
+    </servlet>
+   <servlet-mapping>
+       <servlet-name>javax.ws.rs.core.Application</servlet-name>
+       <url-pattern>/rest/*</url-pattern>
+   </servlet-mapping>
     <session-config>
         <session-timeout>
             1

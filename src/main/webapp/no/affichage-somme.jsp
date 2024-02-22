@@ -12,4 +12,3 @@ ${somme}
 
 
 Cliquez <a href="saisie-nombre.html">ici</a> pour effectuer un nouveau calcul--%>
---%>
