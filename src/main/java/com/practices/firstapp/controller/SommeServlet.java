@@ -66,10 +66,6 @@ public class SommeServlet extends HttpServlet {
 
                 objectMapper.writeValue(out,sommeEtProduit);
 
-
-
-
-
                 //objectMapper.writeValue(out,list);
                 //String messageJSON="{\"somme\" : { \"numerique\":"+somme+", \"texte\": \"douze\"},"+"\"produit\" : { \"numerique\":"+produit+",\"texte\":\"trente-six\"}}";
                 //out.println(messageJSON);
