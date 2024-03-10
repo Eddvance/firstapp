@@ -1,4 +1,4 @@
-package resources;
+package com.practices.firstapp.controller;
 
 import dto.Produit;
 import dto.Somme;
@@ -15,7 +15,7 @@ public class CalculationResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("/somme-et-produit")
+    @Path("/sommeetproduit")
     public SommeEtProduit sommeEtProduit(@QueryParam("nombre1") int nombre1,@QueryParam("nombre2") int nombre2){
 
         int sommeNumerique=nombre1+nombre2;
